@@ -1,1 +1,3 @@
-export const OK = 200;
+export function random(min: number, max: number) {
+  return Math.random() * (max - min) + min;
+}

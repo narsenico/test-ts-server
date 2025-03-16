@@ -8,7 +8,7 @@ Guide consultate
 
 ```shell
 npm i express
-npm i -D typescript nodemon tsconfig-paths tsc-alias ts-node @types/express @types/node
+npm i -D typescript nodemon tsconfig-paths tsc-alias ts-node mocha assert @types/express @types/node @types/mocha
 npx tsc --init
 ```
 
@@ -40,6 +40,11 @@ Assicurarsi che il file [package.json](./package.json) contenga questi script
 "scripts": {
   "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
   "start": "node dist/index.js",
-  "dev": "nodemon -r tsconfig-paths/register src/index.ts"
+  "dev": "nodemon -r tsconfig-paths/register src/index.ts",
+  "test": "mocha"
 }
 ```
+
+## Test
+
+Creare il file [.mocharc.json](./.mocharc.json)
